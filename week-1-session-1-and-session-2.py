@@ -1,9 +1,9 @@
 """
 Week 1:
 Problem Set Version 1 + Version 2
-ALL problems in one file.
-UPI (Understand / Plan / Implement) is included as comments for each problem.
+All problems in one file with full UPI structure.
 """
+
 
 # =========================================================
 # Problem Set Version 1
@@ -14,25 +14,19 @@ UPI (Understand / Plan / Implement) is included as comments for each problem.
 # Problem #: 1 (Hello World!)
 # Time Limit: 5 minutes
 # Problem Importance:
-# This is testing if I know the basic order: define the function first, then call it.
-# That matters because forgetting to call a function (or calling it before it exists) breaks code fast.
-#
+# This problem matters because it practices defining and calling a basic function in the correct order.
 # U -- Understand
-# 1) Do you want the print inside the function (so the function actually does something)?
-# 2) Should it print exactly: Hello world! (same caps + punctuation)?
-#
+# 1) Should the function print the message directly instead of returning it?
+# 2) Should the output match the exact capitalization and punctuation shown?
 # P -- Plan
-# I'll define hello_world(), put the print inside, then call it once.
-# Time: O(1) because it prints once.
-# Space: O(1) because it uses no extra memory.
-#
-# Pseudocode:
-# - define hello_world():
-#   - print "Hello world!"
+# I will define a function named hello_world() that prints the required message and then call it once.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define hello_world()
+# - print "Hello world!"
 # - call hello_world()
-#
 # I -- Implement
-# ---------------------------------------------------------
 def hello_world():
     print("Hello world!")
 
@@ -45,28 +39,22 @@ hello_world()
 # Problem #: 2 (Today's Mood)
 # Time Limit: 5 minutes
 # Problem Importance:
-# This checks that I understand variables inside a function and that changing a variable changes output.
-# In real coding, variables store everything (user input, settings, data), so this is a must.
-#
+# This problem matters because it introduces variables inside functions and shows how variable values affect output.
 # U -- Understand
-# 1) Do we keep the variable name mood, or can I rename it? (I'll keep it.)
-# 2) Should it match the format exactly: Today's mood: <emoji> ?
-#
+# 1) Should the mood be stored in a variable before printing?
+# 2) Should the printed format start with exactly "Today's mood: "?
 # P -- Plan
-# I'll change mood to my emoji and call the function.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - define todays_mood():
-#   - mood = "my emoji"
-#   - print "Today's mood: " + mood
+# I will store an emoji in a variable called mood and print it with the required label.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define todays_mood()
+# - set mood to an emoji
+# - print "Today's mood: " plus mood
 # - call todays_mood()
-#
 # I -- Implement
-# ---------------------------------------------------------
 def todays_mood():
-    mood = "🥱"  # change this to your mood
+    mood = "🥱"
     print("Today's mood: " + mood)
 
 
@@ -78,25 +66,19 @@ todays_mood()
 # Problem #: 3 (Lunch Menu)
 # Time Limit: 5 minutes
 # Problem Importance:
-# This tests parameters and passing an argument when calling a function.
-# That's important because real code relies on inputs instead of hardcoding.
-#
+# This problem matters because it practices using parameters so a function can work with different inputs.
 # U -- Understand
-# 1) Should the function print or return? (It says print.)
-# 2) Is menu always a string/emoji? (Assume yes.)
-#
+# 1) Should the function print the menu item instead of returning it?
+# 2) Should the menu argument be passed in when the function is called?
 # P -- Plan
-# I'll call print_menu("🍕") so it prints the example output.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - define print_menu(menu):
-#   - print "Lunch today is: " + menu
-# - call print_menu("🍕")
-#
+# I will create a function with one parameter and print the sentence using that argument.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define print_menu(menu)
+# - print "Lunch today is: " plus menu
+# - call print_menu with "🍕"
 # I -- Implement
-# ---------------------------------------------------------
 def print_menu(menu):
     print("Lunch today is: " + menu)
 
@@ -109,33 +91,27 @@ print_menu("🍕")
 # Problem #: 4 (Sum of Two Integers)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This tests reusing a function result and following constraints (no +, -, *, / outside sum()).
-# Interviews love constraint rules like this.
-#
+# This problem matters because it practices reusing a function result while following a specific rule about operations.
 # U -- Understand
-# 1) "Double the calculated sum" means add it to itself using sum(), right? (Yes.)
-# 2) Only print the final doubled result? (Yes.)
-#
+# 1) Should the first result be found by calling the helper function once with 13 and 27?
+# 2) Should the doubled total be made by adding the first sum to itself through the same helper function?
 # P -- Plan
-# - total = sum(13, 27)
-# - doubled = sum(total, total)
-# - print doubled
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - total = sum(13, 27)
-# - doubled = sum(total, total)
-# - print doubled
-#
+# I will define a helper function that adds two numbers, use it to get the first total, then use it again to double that result.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define add_numbers(a, b)
+# - return a + b
+# - set first_sum to add_numbers(13, 27)
+# - set double_sum to add_numbers(first_sum, first_sum)
+# - print double_sum
 # I -- Implement
-# ---------------------------------------------------------
-def sum(a, b):
+def add_numbers(a, b):
     return a + b
 
 
-first_sum = sum(13, 27)
-double_sum = sum(first_sum, first_sum)
+first_sum = add_numbers(13, 27)
+double_sum = add_numbers(first_sum, first_sum)
 print(double_sum)
 
 
@@ -144,29 +120,24 @@ print(double_sum)
 # Problem #: 5 (Product of Two Integers)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This checks if I can write a function that returns a value (not just prints).
-# Returning is important because other code can use the result.
-#
+# This problem matters because it practices returning a value from a function so it can be used later.
 # U -- Understand
-# 1) Return the product, not print it, correct? (Yes.)
-# 2) Can a and b be negative/0? (It should still work.)
-#
+# 1) Should the function return the product instead of printing it inside the function?
+# 2) Should the example call show the returned result by printing it outside the function?
 # P -- Plan
-# Define product(a, b) and return a * b.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - define product(a, b):
-#   - return a * b
-#
+# I will write a function that multiplies two integers and returns the result, then print the sample output.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define product(a, b)
+# - return a * b
+# - print product(22, 7)
 # I -- Implement
-# ---------------------------------------------------------
 def product(a, b):
     return a * b
 
 
-print(product(22, 7))  # expected 154
+print(product(22, 7))
 
 
 # ---------------------------------------------------------
@@ -174,35 +145,29 @@ print(product(22, 7))  # expected 154
 # Problem #: 6 (Classify Age)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This is basic conditionals. Real apps do this type of rule-checking constantly.
-#
+# This problem matters because it introduces basic conditional logic used to sort inputs into categories.
 # U -- Understand
-# 1) If age is exactly 18, should it be "adult"? (Yes, since < 18 is child.)
-# 2) Do we assume age is a valid integer? (Yes.)
-#
+# 1) Should age 18 be classified as "adult" because only values less than 18 are children?
+# 2) Should the function return the category string instead of printing it directly?
 # P -- Plan
-# If age < 18 return "child", else return "adult".
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if age < 18: return "child"
-# - else: return "adult"
-#
+# I will use an if statement to return "child" for ages under 18 and "adult" otherwise.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define classify_age(age)
+# - if age < 18, return "child"
+# - otherwise return "adult"
+# - print function results for sample ages
 # I -- Implement
-# ---------------------------------------------------------
 def classify_age(age):
     if age < 18:
         return "child"
     return "adult"
 
 
-output = classify_age(18)
-print(output)
-output = classify_age(7)
-print(output)
-output = classify_age(50)
-print(output)
+print(classify_age(18))
+print(classify_age(7))
+print(classify_age(50))
 
 
 # ---------------------------------------------------------
@@ -210,40 +175,33 @@ print(output)
 # Problem #: 7 (What time is it?)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This tests multiple condition branches + a default case. That's common in interviews and real logic.
-#
+# This problem matters because it practices multiple condition checks and a default case in one function.
 # U -- Understand
-# 1) Should the function return the string (not print it)? (Yes.)
-# 2) Is hour always an int? (Assume yes.)
-#
+# 1) Should the function return a string message based on the hour?
+# 2) Should any hour other than 2 or 12 return the nap message?
 # P -- Plan
-# - if hour == 2 return taco time
-# - elif hour == 12 return pbj time
-# - else return nap time
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if hour == 2: return "taco time 🌮"
-# - elif hour == 12: return "peanut butter jelly time 🥪"
-# - else: return "nap time 😴"
-#
+# I will use if, elif, and else to match the hour to the correct message.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define what_time_is_it(hour)
+# - if hour is 2, return taco message
+# - elif hour is 12, return peanut butter jelly message
+# - else return nap message
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def what_time_is_it(hour):
     if hour == 2:
         return "taco time 🌮"
-    if hour == 12:
+    elif hour == 12:
         return "peanut butter jelly time 🥪"
-    return "nap time 😴"
+    else:
+        return "nap time 😴"
 
 
-time = what_time_is_it(2)
-print(time)
-time = what_time_is_it(7)
-print(time)
-time = what_time_is_it(12)
-print(time)
+print(what_time_is_it(2))
+print(what_time_is_it(7))
+print(what_time_is_it(12))
 
 
 # ---------------------------------------------------------
@@ -251,29 +209,22 @@ print(time)
 # Problem #: 8 (Blackjack)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests condition ordering. Checking the wrong order gives wrong outputs.
-#
+# This problem matters because it shows how the order of conditions affects program correctness.
 # U -- Understand
-# 1) This function prints messages (doesn't return), correct? (Yes.)
-# 2) Are scores integers? (Assume yes.)
-#
+# 1) Should a score of exactly 21 print "Blackjack!" before any other check?
+# 2) Should scores below 17 print "Hit me!" as the default case?
 # P -- Plan
-# Check in this order:
-# - score == 21 -> Blackjack!
-# - score > 21 -> Bust!
-# - 17 <= score < 21 -> Nice hand!
-# - else -> Hit me!
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if score == 21: print "Blackjack!"
-# - elif score > 21: print "Bust!"
-# - elif score >= 17: print "Nice hand!"
-# - else: print "Hit me!"
-#
+# I will check the score from most specific to most general so each score prints the correct message.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define blackjack(score)
+# - if score == 21, print "Blackjack!"
+# - elif score > 21, print "Bust!"
+# - elif score >= 17, print "Nice hand!"
+# - else print "Hit me!"
+# - call function with sample scores
 # I -- Implement
-# ---------------------------------------------------------
 def blackjack(score):
     if score == 21:
         print("Blackjack!")
@@ -296,24 +247,20 @@ blackjack(10)
 # Problem #: 9 (First Item)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This checks list indexing and handling empty lists without crashing.
-#
+# This problem matters because it practices list indexing and handling empty lists safely.
 # U -- Understand
-# 1) If the list is empty, return None exactly? (Yes.)
-# 2) Can the list contain any type? (Yes, but indexing is the same.)
-#
+# 1) Should the function return None when the list is empty?
+# 2) Should the function return the element itself instead of printing it inside the function?
 # P -- Plan
-# - if list is empty: return None
-# - else: return lst[0]
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if not lst: return None
-# - return lst[0]
-#
+# I will first check if the list is empty and return None, otherwise return the first item.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define get_first(lst)
+# - if lst is empty, return None
+# - otherwise return lst[0]
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def get_first(lst):
     if not lst:
         return None
@@ -329,24 +276,20 @@ print(get_first([]))
 # Problem #: 10 (Last Item)
 # Time Limit: 10 minutes
 # Problem Importance:
-# Same idea as first item, but last item. Empty list is the main edge case.
-#
+# This problem matters because it reinforces list indexing and empty-list edge cases.
 # U -- Understand
-# 1) Return None if empty, correct? (Yes.)
-# 2) Using lst[-1] is allowed? (Yes.)
-#
+# 1) Should the function return None when no last item exists?
+# 2) Should the last element be returned using list indexing?
 # P -- Plan
-# - if empty: return None
-# - else return lst[-1]
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if not lst: return None
-# - return lst[-1]
-#
+# I will check for an empty list first and then return the last item with negative indexing.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define get_last(lst)
+# - if lst is empty, return None
+# - otherwise return lst[-1]
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def get_last(lst):
     if not lst:
         return None
@@ -362,26 +305,23 @@ print(get_last([]))
 # Problem #: 11 (Counter)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This tests basic for-loops with range and inclusive endpoints.
-#
+# This problem matters because it practices using loops and ranges to repeat an action a set number of times.
 # U -- Understand
-# 1) Should stop be included? (Yes, inclusive.)
-# 2) Print one number per line? (Yes.)
-#
+# 1) Should the numbers start at 1 and include the stop value?
+# 2) Should each number be printed on its own line?
 # P -- Plan
-# Use range(1, stop + 1) and print each number.
-# Time: O(stop)
-# Space: O(1)
-#
-# Pseudocode:
-# - for i in range(1, stop+1):
-#   - print i
-#
+# I will loop from 1 through stop using range and print each number.
+# Time Complexity: O(stop)
+# Space Complexity: O(1)
+# Pseudocode
+# - define counter(stop)
+# - loop from 1 to stop inclusive
+# - print each number
+# - call counter(7)
 # I -- Implement
-# ---------------------------------------------------------
 def counter(stop):
-    for i in range(1, stop + 1):
-        print(i)
+    for number in range(1, stop + 1):
+        print(number)
 
 
 counter(7)
@@ -392,29 +332,26 @@ counter(7)
 # Problem #: 12 (Sum of 1 to 10)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This is the accumulator pattern (running total), which shows up in tons of interview problems.
-#
+# This problem matters because it introduces the accumulator pattern for building a running total.
 # U -- Understand
-# 1) Return the sum (don't print inside)? (Yes.)
-# 2) Always 1..10, not variable? (Yes.)
-#
+# 1) Should the function return the final sum instead of printing during the loop?
+# 2) Should the loop always add the numbers from 1 through 10?
 # P -- Plan
-# total=0; loop 1..10; add into total; return total.
-# Time: O(1) (fixed 10 loops)
-# Space: O(1)
-#
-# Pseudocode:
-# - total = 0
-# - for i in 1..10:
-#   - total += i
+# I will create a total variable, add each number from 1 to 10, and return the result.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define sum_ten()
+# - set total to 0
+# - loop from 1 to 10 inclusive
+# - add each number to total
 # - return total
-#
+# - print the result
 # I -- Implement
-# ---------------------------------------------------------
 def sum_ten():
     total = 0
-    for i in range(1, 11):
-        total += i
+    for number in range(1, 11):
+        total += number
     return total
 
 
@@ -426,29 +363,26 @@ print(sum_ten())
 # Problem #: 13 (Total Sum)
 # Time Limit: 10 minutes
 # Problem Importance:
-# Same accumulator idea, but now it goes to a variable stop.
-#
+# This problem matters because it extends the running-total pattern to work with a variable stopping point.
 # U -- Understand
-# 1) stop is inclusive? (Yes.)
-# 2) stop is positive? (Assume yes.)
-#
+# 1) Should the stop value be included in the total?
+# 2) Should the function return the sum instead of printing inside the loop?
 # P -- Plan
-# total=0; loop 1..stop; add; return.
-# Time: O(stop)
-# Space: O(1)
-#
-# Pseudocode:
-# - total = 0
-# - for i in 1..stop:
-#   - total += i
+# I will use a loop from 1 to stop inclusive and add each number into a total variable.
+# Time Complexity: O(stop)
+# Space Complexity: O(1)
+# Pseudocode
+# - define sum_positive_range(stop)
+# - set total to 0
+# - loop from 1 to stop inclusive
+# - add each number to total
 # - return total
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def sum_positive_range(stop):
     total = 0
-    for i in range(1, stop + 1):
-        total += i
+    for number in range(1, stop + 1):
+        total += number
     return total
 
 
@@ -460,29 +394,26 @@ print(sum_positive_range(6))
 # Problem #: 14 (Total Sum in Range)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests correct use of range(start, stop+1) and avoiding off-by-one errors.
-#
+# This problem matters because it practices summing values across a start and stop range without off-by-one mistakes.
 # U -- Understand
-# 1) Inclusive on both ends? (Yes.)
-# 2) Assume start <= stop? (Assume yes.)
-#
+# 1) Should both start and stop be included in the total?
+# 2) Can the function assume start is less than or equal to stop?
 # P -- Plan
-# total=0; loop start..stop; add; return.
-# Time: O(stop-start)
-# Space: O(1)
-#
-# Pseudocode:
-# - total = 0
-# - for i in start..stop:
-#   - total += i
+# I will loop from start to stop inclusive, add each value to a running total, and return it.
+# Time Complexity: O(stop - start + 1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define sum_range(start, stop)
+# - set total to 0
+# - loop from start to stop inclusive
+# - add each number to total
 # - return total
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def sum_range(start, stop):
     total = 0
-    for i in range(start, stop + 1):
-        total += i
+    for number in range(start, stop + 1):
+        total += number
     return total
 
 
@@ -494,33 +425,27 @@ print(sum_range(3, 9))
 # Problem #: 15 (Negative Numbers)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This is filtering while looping. The only trick is what to do if none are negative.
-#
+# This problem matters because it practices filtering values in a list and handling the case where no matches exist.
 # U -- Understand
-# 1) If no negatives, do we print None (literally)? (Example shows None, so yes.)
-# 2) Only printing is needed, no return? (Yes.)
-#
+# 1) Should only negative numbers be printed from the list?
+# 2) Should the function print None if there are no negative numbers at all?
 # P -- Plan
-# Loop through list, print negatives, track if we printed any.
-# If we printed none, print None.
-# Time: O(n)
-# Space: O(1)
-#
-# Pseudocode:
-# - found = False
-# - for num in lst:
-#   - if num < 0:
-#     - print num
-#     - found = True
-# - if not found: print None
-#
+# I will loop through the list, print every negative value, and track whether any negative values were found.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Pseudocode
+# - define print_negatives(lst)
+# - set found_negative to False
+# - loop through each number in lst
+# - if number is negative, print it and set found_negative to True
+# - after loop, if found_negative is False, print None
+# - call function with sample lists
 # I -- Implement
-# ---------------------------------------------------------
 def print_negatives(lst):
     found_negative = False
-    for num in lst:
-        if num < 0:
-            print(num)
+    for number in lst:
+        if number < 0:
+            print(number)
             found_negative = True
     if not found_negative:
         print(None)
@@ -539,23 +464,19 @@ print_negatives([1, 2, 3, 4, 5])
 # Problem #: 1 (Hello User!)
 # Time Limit: 5 minutes
 # Problem Importance:
-# This tests parameters + printing a message using the input.
-#
+# This problem matters because it practices using a function parameter to personalize output.
 # U -- Understand
-# 1) Print (not return), correct? (Yes.)
-# 2) name is a string? (Assume yes.)
-#
+# 1) Should the function print the greeting instead of returning it?
+# 2) Should the name be inserted directly after the word "Hello"?
 # P -- Plan
-# Print "Hello " + name.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - define greet_user(name):
-#   - print "Hello " + name
-#
+# I will define a function with one parameter and print the greeting using string concatenation.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define greet_user(name)
+# - print "Hello " plus name
+# - call greet_user("Michael")
 # I -- Implement
-# ---------------------------------------------------------
 def greet_user(name):
     print("Hello " + name)
 
@@ -568,23 +489,19 @@ greet_user("Michael")
 # Problem #: 2 (Calculate Difference)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This checks returning a value and correct subtraction order.
-#
+# This problem matters because it practices returning the result of arithmetic in the correct order.
 # U -- Understand
-# 1) It's a - b, right? (Yes.)
-# 2) Return the result, not print inside? (Yes.)
-#
+# 1) Should the subtraction be a minus b in that exact order?
+# 2) Should the function return the answer instead of printing it inside the function?
 # P -- Plan
-# Return a - b.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - define difference(a, b):
-#   - return a - b
-#
+# I will return the result of subtracting the second number from the first, then print the sample call.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define difference(a, b)
+# - return a - b
+# - print difference(8, 3)
 # I -- Implement
-# ---------------------------------------------------------
 def difference(a, b):
     return a - b
 
@@ -597,22 +514,19 @@ print(difference(8, 3))
 # Problem #: 3 (List Concatenation)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This is a classic array/list construction pattern: build a new list that repeats content.
-#
+# This problem matters because it shows how to build a new list from existing list data.
 # U -- Understand
-# 1) Return a new list, not modify original? (Yes.)
-# 2) If nums is empty, return empty list? (Yes.)
-#
+# 1) Should the function return a new list instead of changing the original list?
+# 2) Should the result contain the list items repeated twice in the same order?
 # P -- Plan
-# Return nums + nums.
-# Time: O(n)
-# Space: O(n)
-#
-# Pseudocode:
+# I will return the list added to itself so the elements appear two times.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Pseudocode
+# - define concatenate_list(nums)
 # - return nums + nums
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def concatenate_list(nums):
     return nums + nums
 
@@ -625,26 +539,21 @@ print(concatenate_list([1, 2, 3, 4]))
 # Problem #: 4 (Sleep Assessment)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This tests correct conditional ranges (less than, between, greater than).
-#
+# This problem matters because it practices checking number ranges with conditionals.
 # U -- Understand
-# 1) 8 and 10 are included in "good rest"? (Yes.)
-# 2) Print only? (Yes.)
-#
+# 1) Should values from 8 through 10 print the good-rest message?
+# 2) Should values greater than 10 print the sleep-prodigy message?
 # P -- Plan
-# - if < 8: oof
-# - elif <= 10: good rest
-# - else: prodigy
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if hours < 8: print msg1
-# - elif hours <= 10: print msg2
-# - else: print msg3
-#
+# I will use if, elif, and else to print the correct sentence based on the number of hours.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define sleep_assessment(hours)
+# - if hours < 8, print first message
+# - elif hours <= 10, print second message
+# - else print third message
+# - call function with sample values
 # I -- Implement
-# ---------------------------------------------------------
 def sleep_assessment(hours):
     if hours < 8:
         print("Oof, go back to bed!")
@@ -665,39 +574,37 @@ sleep_assessment(9)
 # Problem #: 5 (Calculate Tip)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests mapping a string category to a numeric percent and returning the computed value.
-#
+# This problem matters because it practices mapping text categories to numeric calculations.
 # U -- Understand
-# 1) service_quality is exactly "poor"/"average"/"excellent"? (Assume yes.)
-# 2) Anything else returns None? (Yes.)
-#
+# 1) Should "poor", "average", and "excellent" map to fixed tip percentages?
+# 2) Should any other service quality return None?
 # P -- Plan
-# Check service_quality and return bill * percent.
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if poor: return bill * 0.10
-# - elif average: return bill * 0.15
-# - elif excellent: return bill * 0.20
-# - else: return None
-#
+# I will check the service quality with conditionals and return the correct percentage of the bill.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define calculate_tip(bill, service_quality)
+# - if quality is poor, return bill * 0.10
+# - elif quality is average, return bill * 0.15
+# - elif quality is excellent, return bill * 0.20
+# - else return None
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def calculate_tip(bill, service_quality):
     if service_quality == "poor":
         return bill * 0.10
-    if service_quality == "average":
+    elif service_quality == "average":
         return bill * 0.15
-    if service_quality == "excellent":
+    elif service_quality == "excellent":
         return bill * 0.20
-    return None
+    else:
+        return None
 
 
 print(calculate_tip(44.53, "average"))
 print(calculate_tip(44.53, "poor"))
 print(calculate_tip(44.53, "excellent"))
-print(calculate_tip(44.53, "amazing"))  # None
+print(calculate_tip(44.53, "amazing"))
 
 
 # ---------------------------------------------------------
@@ -705,32 +612,29 @@ print(calculate_tip(44.53, "amazing"))  # None
 # Problem #: 6 (Rock, Paper, Scissors)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests translating rules into logic and handling ties cleanly.
-#
+# This problem matters because it practices translating game rules into clear conditional logic.
 # U -- Understand
-# 1) Inputs are only rock/paper/scissors? (Assume yes.)
-# 2) Print results (not return)? (Yes.)
-#
+# 1) Should the function print a tie message when both players choose the same item?
+# 2) Should the remaining cases be decided by the standard rock-paper-scissors rules?
 # P -- Plan
-# - if same: tie
-# - elif player1 has a winning combo: player 1 wins
-# - else: player 2 wins
-# Time: O(1)
-# Space: O(1)
-#
-# Pseudocode:
-# - if p1 == p2: print tie
-# - elif (p1 beats p2): print p1 wins
-# - else: print p2 wins
-#
+# I will first check for a tie, then check the winning combinations for player 1, and otherwise player 2 wins.
+# Time Complexity: O(1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define rock_paper_scissors(player1, player2)
+# - if player1 equals player2, print tie message
+# - elif player1 has a winning combination, print player 1 wins
+# - else print player 2 wins
+# - call function with sample rounds
 # I -- Implement
-# ---------------------------------------------------------
 def rock_paper_scissors(player1, player2):
     if player1 == player2:
         print("It's a tie!")
-    elif (player1 == "rock" and player2 == "scissors") or (
-        player1 == "scissors" and player2 == "paper"
-    ) or (player1 == "paper" and player2 == "rock"):
+    elif (
+        (player1 == "rock" and player2 == "scissors")
+        or (player1 == "scissors" and player2 == "paper")
+        or (player1 == "paper" and player2 == "rock")
+    ):
         print("Player 1 wins!")
     else:
         print("Player 2 wins!")
@@ -748,31 +652,26 @@ rock_paper_scissors("paper", "rock")
 # Problem #: 7 (Unscramble and Divide)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests function structure + looping + building a result list.
-#
+# This problem matters because it practices looping through a list and building a new result list.
 # U -- Understand
-# 1) Return the list (not just print)? (Yes.)
-# 2) Division uses / so results can be floats? (Yes.)
-#
+# 1) Should each number in the list be divided by 2?
+# 2) Should the function return the new list instead of printing each value one by one?
 # P -- Plan
-# Build result list by looping and appending number/2.
-# Time: O(n)
-# Space: O(n)
-#
-# Pseudocode:
-# - result = []
-# - for number in lst:
-#   - halved = number / 2
-#   - append halved
+# I will loop through the list, divide each number by 2, append it to a result list, and return the result.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Pseudocode
+# - define halve_lst(lst)
+# - create empty result list
+# - loop through each number in lst
+# - divide number by 2 and append to result
 # - return result
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def halve_lst(lst):
     result = []
     for number in lst:
-        halved = number / 2
-        result.append(halved)
+        result.append(number / 2)
     return result
 
 
@@ -784,35 +683,32 @@ print(halve_lst([2, 4, 6, 8]))
 # Problem #: 8 (Above the Threshold)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This is list filtering. Super common pattern in interviews (filter by condition).
-#
+# This problem matters because it practices filtering list items based on a condition.
 # U -- Understand
-# 1) Only keep numbers strictly greater than threshold? (Yes.)
-# 2) Return a new list? (Yes.)
-#
+# 1) Should the result include only numbers strictly greater than the threshold?
+# 2) Should the function return a new list instead of changing the original list?
 # P -- Plan
-# Loop and append numbers > threshold into result.
-# Time: O(n)
-# Space: O(n)
-#
-# Pseudocode:
-# - result = []
-# - for num in lst:
-#   - if num > threshold: append num
+# I will loop through the list, keep the numbers greater than the threshold, and return them in a new list.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Pseudocode
+# - define above_threshold(lst, threshold)
+# - create empty result list
+# - loop through each number in lst
+# - if number > threshold, append it to result
 # - return result
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def above_threshold(lst, threshold):
     result = []
-    for num in lst:
-        if num > threshold:
-            result.append(num)
+    for number in lst:
+        if number > threshold:
+            result.append(number)
     return result
 
 
-lst = [8, 2, 13, 11, 4, 10, 14]
-print(above_threshold(lst, 10))
+numbers = [8, 2, 13, 11, 4, 10, 14]
+print(above_threshold(numbers, 10))
 
 
 # ---------------------------------------------------------
@@ -820,26 +716,23 @@ print(above_threshold(lst, 10))
 # Problem #: 9 (Countdown)
 # Time Limit: 10 minutes
 # Problem Importance:
-# This tests reverse range usage without missing the endpoint.
-#
+# This problem matters because it practices looping backward through a range without skipping endpoints.
 # U -- Understand
-# 1) Assume m >= n? (Yes.)
-# 2) Print one per line? (Yes.)
-#
+# 1) Should the function print from m down to n inclusive?
+# 2) Can the function assume m is greater than or equal to n?
 # P -- Plan
-# Use range(m, n-1, -1) and print each number.
-# Time: O(m-n)
-# Space: O(1)
-#
-# Pseudocode:
-# - for i in range(m, n-1, -1):
-#   - print i
-#
+# I will use range with a step of -1 so the loop counts down from m to n.
+# Time Complexity: O(m - n + 1)
+# Space Complexity: O(1)
+# Pseudocode
+# - define countdown(m, n)
+# - loop from m down to n inclusive
+# - print each number
+# - call countdown(5, 1)
 # I -- Implement
-# ---------------------------------------------------------
 def countdown(m, n):
-    for i in range(m, n - 1, -1):
-        print(i)
+    for number in range(m, n - 1, -1):
+        print(number)
 
 
 countdown(5, 1)
@@ -850,25 +743,22 @@ countdown(5, 1)
 # Problem #: 10 (Calculate Power)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests accumulator multiplication (repeat multiply), which is a standard loop skill.
-#
+# This problem matters because it practices repeated multiplication with a loop.
 # U -- Understand
-# 1) exponent is non-negative? (Assume yes.)
-# 2) If exponent is 0, return 1? (Yes.)
-#
+# 1) Should exponent 0 return 1?
+# 2) Should the function multiply the base by itself exponent times?
 # P -- Plan
-# Start result=1, multiply by base exponent times.
-# Time: O(exponent)
-# Space: O(1)
-#
-# Pseudocode:
-# - result = 1
-# - repeat exponent times:
-#   - result *= base
+# I will start with 1 and multiply by the base during a loop that runs exponent times.
+# Time Complexity: O(exponent)
+# Space Complexity: O(1)
+# Pseudocode
+# - define power(base, exponent)
+# - set result to 1
+# - repeat exponent times
+# - multiply result by base
 # - return result
-#
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def power(base, exponent):
     result = 1
     for _ in range(exponent):
@@ -885,25 +775,22 @@ print(power(3, 3))
 # Problem #: 11 (Length of List) -- No len()
 # Time Limit: 15 minutes
 # Problem Importance:
-# This checks that I understand what len() does: loop and count items.
-#
+# This problem matters because it helps show how list length can be counted manually with a loop.
 # U -- Understand
-# 1) No len() at all, correct? (Yes.)
-# 2) Return the length, not print inside? (Yes.)
-#
+# 1) Should the function avoid using len() completely inside the solution?
+# 2) Should the function return the count instead of printing during the loop?
 # P -- Plan
-# Use a counter variable and add 1 per element.
-# Time: O(n)
-# Space: O(1)
-#
-# Pseudocode:
-# - count = 0
-# - for item in lst:
-#   - count += 1
+# I will create a counter variable, add 1 for every item in the list, and return the final count.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Pseudocode
+# - define list_length(lst)
+# - set count to 0
+# - loop through each item in lst
+# - add 1 to count
 # - return count
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def list_length(lst):
     count = 0
     for _ in lst:
@@ -919,29 +806,26 @@ print(list_length([2, 4, 6, 8, 10]))
 # Problem #: 12 (Calculate Factorial)
 # Time Limit: 15 minutes
 # Problem Importance:
-# Factorial is a classic loop problem and checks if I handle repeated multiplication.
-#
+# This problem matters because factorial is a classic example of repeated multiplication in a loop.
 # U -- Understand
-# 1) n is non-negative integer? (Assume yes.)
-# 2) If n is 0, return 1? (Yes.)
-#
+# 1) Should factorial of 0 be 1?
+# 2) Should the function multiply all integers from 1 through n?
 # P -- Plan
-# Multiply 1..n into result.
-# Time: O(n)
-# Space: O(1)
-#
-# Pseudocode:
-# - result = 1
-# - for i in 1..n:
-#   - result *= i
+# I will start with 1 and multiply it by each number from 1 to n inclusive.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Pseudocode
+# - define factorial(n)
+# - set result to 1
+# - loop from 1 to n inclusive
+# - multiply result by the loop number
 # - return result
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def factorial(n):
     result = 1
-    for i in range(1, n + 1):
-        result *= i
+    for number in range(1, n + 1):
+        result *= number
     return result
 
 
@@ -953,29 +837,26 @@ print(factorial(3))
 # Problem #: 13 (Calculate the Squares)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This is a "transform each element" pattern (map). Super common in data processing.
-#
+# This problem matters because it practices transforming every item in a list into a new value.
 # U -- Understand
-# 1) Return a new list of squares? (Yes.)
-# 2) Input is integers? (Assume yes.)
-#
+# 1) Should the function return a new list of squared values?
+# 2) Should each number be multiplied by itself?
 # P -- Plan
-# Loop through nums, append num*num to result, return it.
-# Time: O(n)
-# Space: O(n)
-#
-# Pseudocode:
-# - result = []
-# - for num in nums:
-#   - append num*num
+# I will loop through the list, square each number, add it to a result list, and return that list.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Pseudocode
+# - define squares(nums)
+# - create empty result list
+# - loop through nums
+# - append num * num to result
 # - return result
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def squares(nums):
     result = []
-    for num in nums:
-        result.append(num * num)
+    for number in nums:
+        result.append(number * number)
     return result
 
 
@@ -987,25 +868,22 @@ print(squares([1, 2, 3, 4]))
 # Problem #: 14 (Multiply List)
 # Time Limit: 15 minutes
 # Problem Importance:
-# Another transform pattern, but now includes a parameter multiplier.
-#
+# This problem matters because it combines list transformation with a parameter that changes the calculation.
 # U -- Understand
-# 1) Return a new list? (Yes.)
-# 2) multiplier can be any integer? (Assume yes.)
-#
+# 1) Should every list item be multiplied by the given multiplier?
+# 2) Should the function return a new list instead of changing the original one?
 # P -- Plan
-# Loop and append value*multiplier into result.
-# Time: O(n)
-# Space: O(n)
-#
-# Pseudocode:
-# - result = []
-# - for value in lst:
-#   - append value * multiplier
+# I will loop through the list, multiply each value by the multiplier, and store the results in a new list.
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Pseudocode
+# - define multiply_list(lst, multiplier)
+# - create empty result list
+# - loop through each value in lst
+# - append value * multiplier to result
 # - return result
-#
+# - print sample result
 # I -- Implement
-# ---------------------------------------------------------
 def multiply_list(lst, multiplier):
     result = []
     for value in lst:
@@ -1021,30 +899,26 @@ print(multiply_list([1, 2, 3], 3))
 # Problem #: 15 (Count Evens)
 # Time Limit: 15 minutes
 # Problem Importance:
-# This tests modulus (%) and counting condition matches, a super common interview pattern.
-#
+# This problem matters because it practices counting how many items in a list meet a condition.
 # U -- Understand
-# 1) Even means num % 2 == 0, correct? (Yes.)
-# 2) Return the count, not print inside? (Yes.)
-#
+# 1) Should even numbers be identified with num % 2 == 0?
+# 2) Should the function return the final count instead of printing while looping?
 # P -- Plan
-# Use count=0, loop list, if even increment count, return count.
-# Time: O(n)
-# Space: O(1)
-#
-# Pseudocode:
-# - count = 0
-# - for num in lst:
-#   - if num % 2 == 0:
-#     - count += 1
+# I will loop through the list, increase a counter for each even number, and return the counter.
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Pseudocode
+# - define count_evens(lst)
+# - set count to 0
+# - loop through each number in lst
+# - if the number is even, add 1 to count
 # - return count
-#
+# - print sample results
 # I -- Implement
-# ---------------------------------------------------------
 def count_evens(lst):
     count = 0
-    for num in lst:
-        if num % 2 == 0:
+    for number in lst:
+        if number % 2 == 0:
             count += 1
     return count
 
