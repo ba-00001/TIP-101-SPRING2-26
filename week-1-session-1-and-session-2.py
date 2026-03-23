@@ -1,8 +1,10 @@
-"""
-Week 1:
-Problem Set Version 1 + Version 2
-All problems in one file with full UPI structure.
-"""
+# =========================================================
+# WEEK 1: SESSION 1 & 2
+# Each problem includes:
+# 1) Why this problem was chosen
+# 2) UMPIRE
+# 3) Python solution with comments
+# =========================================================
 
 
 # =========================================================

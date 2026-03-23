@@ -1,6 +1,5 @@
 # =========================================================
-# WEEK 3: SESSION 1
-# FULL SET -- Version 1, Version 2, Version 3
+# WEEK 3: SESSION 1 & 2
 # Each problem includes:
 # 1) Why this problem was chosen
 # 2) UMPIRE

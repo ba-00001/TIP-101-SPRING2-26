@@ -1,3 +1,11 @@
+# =========================================================
+# WEEK 5: SESSION 1 & 2
+# Each problem includes:
+# 1) Why this problem was chosen
+# 2) UMPIRE
+# 3) Python solution with comments
+# =========================================================
+
 # ---------------------------------------------------------
 # Session: 1
 # Problem #: 1 (Prime Number)

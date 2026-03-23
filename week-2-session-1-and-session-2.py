@@ -1,9 +1,10 @@
-"""
-Week 2: Session 1
-Problem Set Version 1 + Version 2 + Version 3
-ALL problems + solutions + function calls.
-UPI (Understand / Plan / Implement) is included as comments for each problem.
-"""
+# =========================================================
+# WEEK 2: SESSION 1 & 2
+# Each problem includes:
+# 1) Why this problem was chosen
+# 2) UMPIRE
+# 3) Python solution with comments
+# =========================================================
 
 # =========================================================
 # Problem Set Version 1
